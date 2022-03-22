@@ -66,8 +66,6 @@ export const Bottom = styled.section`
   width: 100%;
   height: 10%;
 
-  // padding: 0 10%;
-
   display: flex;
   flex-direction: row;
   align-items: center;

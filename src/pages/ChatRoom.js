@@ -1,4 +1,3 @@
-import { useParams } from 'react-router';
 import { useRef, useState, useEffect } from 'react';
 import { Wrapper, Content } from '../components/commons/Components';
 import ChatRoomHeader from '../components/chatroom/ChatRoomHeader';
@@ -8,7 +7,7 @@ import InputForm from '../components/chatroom/InputForm';
 import chats from '../assets/chats.json';
 
 const ChatRoom = () => {
-  const { userId } = useParams();
+  const userId = 'user1';
   const [currentUserId, setCurrentUserId] = useState(userId);
 
   const filteredChats = chats.filter((user) => user.userId === userId);

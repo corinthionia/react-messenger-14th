@@ -24,17 +24,31 @@ const InputForm = ({ currentUserId, chatList, setChatList }) => {
     }
   };
 
+  const handleHeartClick = () => {
+    // e.preventDefault();
+
+    const heartMsg = {
+      userId: currentUserId,
+      message: '❤️',
+      sentAt: Date.now(),
+    };
+
+    setChatList({ userId: userId, chats: [...chatList.chats, heartMsg] });
+  };
+
   return (
     <Bottom>
       <Form>
-        <Button type="button">😀</Button>
+        <Button type="button" onClick={handleHeartClick}>
+          ❤️
+        </Button>
         <Input
           value={inputText}
           onChange={handleInputChange}
           placeholder="Message..."
           spellCheck={false}
         />
-        <Button onClick={handleAddNewMsg}>➕</Button>
+        <Button onClick={handleAddNewMsg}>➕ </Button>
       </Form>
     </Bottom>
   );
@@ -67,10 +81,6 @@ const Button = styled.button`
 
   border: none;
   background: none;
-
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 export default InputForm;

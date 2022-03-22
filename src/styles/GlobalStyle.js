@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { normalize } from "styled-normalize";
-import "./FontStyle.css";
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
+import './FontStyle.css';
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -23,6 +23,11 @@ body {
 :root {
     --vh: 100%;
 }
+
+button:hover  {
+    cursor: pointer;
+}
+
 `;
 
 export default GlobalStyle;

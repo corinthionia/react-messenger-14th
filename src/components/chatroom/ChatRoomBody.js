@@ -1,13 +1,9 @@
-import { useParams } from 'react-router';
 import styled, { css } from 'styled-components';
 import me from '../../assets/me.json';
-import friends from '../../assets/friends.json';
 import { GetTime } from '../../utils/GetTime';
 
 const ChatRoomBody = ({ chatList, setChatList }) => {
-  const { userId } = useParams();
-  const userName = friends.filter((friend) => friend.userId === userId)[0]
-    .userName;
+  const userName = 'dlwlrma';
 
   // const handleDoubleClick = (e) => {
   //   const newList = chatList.chats.map((chat) =>
@@ -23,7 +19,7 @@ const ChatRoomBody = ({ chatList, setChatList }) => {
     <Wrapper>
       {chatList.chats.map(({ userId, sentAt, message }) => (
         <ChatWrapper key={sentAt} sender={userId}>
-          <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/${userId}.jpg`} />
+          <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/user1.jpg`} />
           <TextWrapper>
             <UserName sender={userId}>
               {userId === 'user0' ? me.userName : userName}
