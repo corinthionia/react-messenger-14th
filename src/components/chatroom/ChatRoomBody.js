@@ -19,7 +19,7 @@ const ChatRoomBody = ({ chatList, setChatList }) => {
     <Wrapper>
       {chatList.chats.map(({ userId, sentAt, message }) => (
         <ChatWrapper key={sentAt} sender={userId}>
-          <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/user1.jpg`} />
+          <ProfileImg src={`${process.env.PUBLIC_URL}/imgs/${userId}.jpg`} />
           <TextWrapper>
             <UserName sender={userId}>
               {userId === 'user0' ? me.userName : userName}
