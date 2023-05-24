@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -10,7 +9,7 @@ import me from '../../assets/me.json';
 import friends from '../../assets/friends.json';
 
 const ChatRoomHeader = ({ currentUserId, setCurrentUserId }) => {
-  const { userId } = useParams();
+  const userId = 'user1';
   const user = friends.filter((friend) => friend.userId === userId)[0];
   const [currentUserName, setCurrentUserName] = useState(user.userName);
 

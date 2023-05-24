@@ -1,11 +1,7 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router';
 
-import Friends from './pages/Friends';
-import Search from './pages/Search';
-import ChatList from './pages/ChatList';
 import ChatRoom from './pages/ChatRoom';
-import Setting from './pages/Setting';
 
 function App() {
   function setScreenSize() {
@@ -20,15 +16,11 @@ function App() {
   });
 
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Friends />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/chatlist" element={<ChatList />} />
+    <ChatRoom>
+      {/* <Routes>
         <Route path="/chatroom/:userId" element={<ChatRoom />} />
-        <Route path="/setting" element={<Setting />} />
-      </Routes>
-    </>
+      </Routes> */}
+    </ChatRoom>
   );
 }
 
